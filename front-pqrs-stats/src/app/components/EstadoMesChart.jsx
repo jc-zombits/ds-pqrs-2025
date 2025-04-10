@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import axios from "axios";
+import Link from "next/link";
 
 const EstadoMesChart = () => {
   const [originalData, setOriginalData] = useState(null);

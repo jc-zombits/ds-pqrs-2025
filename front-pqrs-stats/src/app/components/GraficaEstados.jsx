@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
 import Chart from "chart.js/auto";
+import Link from "next/link";
 
 export default function GraficaEstados() {
   const [datos, setDatos] = useState(null);
@@ -47,7 +48,14 @@ export default function GraficaEstados() {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4 text-gray-800">Gráfica de Estados por Mes</h2>
+      <div className="mb-6 flex items-center justify-between">
+        <h2 className="text-2xl font-bold text-gray-800">Gráfica de Estados por Mes</h2>
+        <Link href="/graficas#grafica-estados">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded shadow-sm">
+            ← Volver al inicio
+          </button>
+        </Link>
+      </div>
 
       {/* Gráfica */}
       <div className="mb-6">
