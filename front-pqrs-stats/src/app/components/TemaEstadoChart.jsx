@@ -125,7 +125,7 @@ const TemaEstadoChart = () => {
   }, []);
 
   return (
-    <div className="mt-8 overflow-x-auto">
+    <div className="mt-8 overflow-x-auto shadow-2xl">
       <h2 className="text-lg font-semibold mb-4">Cantidad por Tema y Estado</h2>
       <div className="w-full overflow-hidden rounded-lg shadow-md" style={{ minHeight: '500px', borderRadius: '0.5rem' }}>
         {chartOptions.series ? (

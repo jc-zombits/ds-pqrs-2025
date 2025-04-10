@@ -105,7 +105,7 @@ const OportunidadPorDiaChart = () => {
   }, [dataOriginal, mesSeleccionado]);
 
   return (
-    <div className="bg-white rounded-xl p-6 shadow mt-6 text-blue-400">
+    <div className="bg-white rounded-xl p-6 shadow-2xl text-blue-400">
       <h2 className="text-lg font-semibold mb-4">Gráfico de Oportunidades por Día</h2>
 
       <div className="mb-4">

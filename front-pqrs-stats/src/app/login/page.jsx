@@ -23,18 +23,18 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="pt-10 flex items-center justify-center bg-gray-300">
-      <form onSubmit={handleSubmit} className="p-8 rounded-lg shadow-md w-96 bg-gray-700">
-        <h1 className="text-2xl font-bold mb-6 text-center text-gray-200">Iniciar Sesión</h1>
+    <div className="pt-10 flex items-center justify-center bg-white">
+      <form onSubmit={handleSubmit} className="p-8 rounded-lg shadow-2xl w-96 bg-white">
+        <h1 className="text-2xl font-bold mb-6 text-center text-gray-700">Iniciar Sesión</h1>
         
         <div className="mb-4">
-          <label className="block text-sm font-medium mb-1 text-gray-200">Email</label>
-          <input name="email" type="email" required className="w-full px-3 py-2 border rounded-md" />
+          <label className="block text-sm font-medium mb-1 text-gray-700">Email</label>
+          <input name="email" type="email" required className="w-full px-3 py-2 border text-gray-700 rounded-md" />
         </div>
         
         <div className="mb-6">
-          <label className="block text-sm font-medium mb-1 text-gray-200">Contraseña</label>
-          <input name="password" type="password" required className="w-full px-3 py-2 border rounded-md" />
+          <label className="block text-sm font-medium mb-1 text-gray-700">Contraseña</label>
+          <input name="password" type="password" required className="w-full px-3 py-2 border text-gray-700 rounded-md" />
         </div>
         
         <button 
@@ -62,7 +62,7 @@ export default function LoginPage() {
           </button>
         </div>
         
-        <p className="mt-4 text-center text-sm">
+        <p className="mt-4 text-center text-sm text-gray-700">
           ¿No tienes cuenta?{' '}
           <a href="/register" className="text-white-400 hover:underline">
             Regístrate

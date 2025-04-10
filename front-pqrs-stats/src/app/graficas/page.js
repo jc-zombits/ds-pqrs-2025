@@ -18,8 +18,8 @@ export default async function GraficasPage() {
     <>
       {/* Encabezado dentro del área principal */}
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-gray-400">Dashboard de Gráficas</h1>
-        <p className="text-gray-500">Visualización de datos PQRS</p>
+        <h1 className="text-2xl font-bold text-gray-700">Dashboard de Gráficas</h1>
+        <p className="text-gray-700">Visualización de datos PQRS</p>
       </div>
 
       {/* Gráficas */}

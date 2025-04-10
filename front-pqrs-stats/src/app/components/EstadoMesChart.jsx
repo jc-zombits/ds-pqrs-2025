@@ -65,10 +65,10 @@ const EstadoMesChart = () => {
   };
 
   return (
-    <div className="p-6 bg-white rounded-xl shadow-md">
+    <div className="p-6 bg-white rounded-xl shadow-2xl">
       <h2 className="text-xl font-bold mb-4 text-blue-400">Gráfica de Estados por Mes</h2>
 
-      <div className="mb-4 text-orange-400">
+      <div className="mb-4 text-orange-600">
         <span className="font-semibold mr-2 text-blue-400">Filtrar por estado:</span>
         {originalData.datasets.map(dataset => (
           <label key={dataset.estado} className="mr-4">

@@ -149,7 +149,7 @@ const IngresosTotalMes = () => {
 
   return (
     <div className="mt-8">
-      <div className="bg-white rounded-lg shadow-md p-4" style={{ 
+      <div className="bg-white rounded-lg shadow-2xl p-4" style={{ 
         borderRadius: '12px',
         border: '1px solid #e2e8f0'
       }}>
