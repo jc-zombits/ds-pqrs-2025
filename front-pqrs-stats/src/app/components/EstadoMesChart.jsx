@@ -9,7 +9,10 @@ const EstadoMesChart = () => {
   const [originalData, setOriginalData] = useState(null);
   const [selectedEstados, setSelectedEstados] = useState([]);
 
-  const meses = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+  const meses = [
+    "Ene", "Feb", "Mar", "Abr", "May", "Jun",
+    "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"
+  ];
 
   useEffect(() => {
     axios.get("http://localhost:5000/api/data/stats/estado-mes")
@@ -56,7 +59,6 @@ const EstadoMesChart = () => {
     series: series
   };
 
-  // Controlador de filtros
   const handleEstadoToggle = (estado) => {
     setSelectedEstados(prev =>
       prev.includes(estado)
@@ -91,10 +93,19 @@ const EstadoMesChart = () => {
         <ul className="list-disc ml-6 text-blue-400">
           {resumen.map((item) => (
             <li key={item.estado}>
-              <span className="font-medium text-blue-400">{item.estado}:</span> {item.total} trámites en total
+              <span className="font-medium">{item.estado}:</span> {item.total} trámites en total
             </li>
           ))}
         </ul>
+      </div>
+
+      {/* Botón para ir al análisis completo */}
+      <div className="mt-6 flex justify-end">
+        <Link href="/graficas/estadisticas/grafica-estados">
+          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow-md transition">
+            Ver análisis completo →
+          </button>
+        </Link>
       </div>
     </div>
   );

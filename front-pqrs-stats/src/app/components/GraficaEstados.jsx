@@ -47,7 +47,7 @@ export default function GraficaEstados() {
   const mesesInactivos = mesTotal.filter((m) => m.total === 0);
 
   return (
-    <div className="p-6">
+    <div className="p-6" id="grafica-estados">
       <div className="mb-6 flex items-center justify-between">
         <h2 className="text-2xl font-bold text-gray-800">Gráfica de Estados por Mes</h2>
         <Link href="/graficas#grafica-estados">
