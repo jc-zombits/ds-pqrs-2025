@@ -36,7 +36,7 @@ export default function Sidebar() {
       </div>
       
       {/* Menú */}
-      <nav className="flex-1 p-4 space-y-2">
+      <nav className="flex-1 overflow-y-auto p-4 space-y-2">
 
         {/* Opción Inicio */}
         {navItems.map((item) => (
@@ -84,7 +84,58 @@ export default function Sidebar() {
                 <FiPieChart size={16} />
                 <span>Gráfica de estados por mes</span>
               </Link>
-              {/* Puedes agregar más subitems aquí */}
+
+              {/* Gráfico de oportunidades por día - FALTA IMPLEMENTACION DE LINK */}
+              <Link
+                href="/graficas/estadisticas/grafica-oportunidades-dia"
+                className={`flex items-center space-x-2 p-2 rounded-md transition-colors ${
+                  pathname === "/graficas/estadisticas/grafica-estados"
+                    ? "bg-gray-400 text-white"
+                    : "text-gray-700 hover:bg-gray-300"
+                }`}
+              >
+                <FiPieChart size={16} />
+                <span>Gráfica de oportunidades por día</span>
+              </Link>
+
+              {/* Gráfico de temas por mes - FALTA IMPLEMENTACION DE LINK */}
+              <Link
+                href="/graficas/estadisticas/grafica-estados"
+                className={`flex items-center space-x-2 p-2 rounded-md transition-colors ${
+                  pathname === "/graficas/estadisticas/grafica-estados"
+                    ? "bg-gray-400 text-white"
+                    : "text-gray-700 hover:bg-gray-300"
+                }`}
+              >
+                <FiPieChart size={16} />
+                <span>Gráfica de temas por mes</span>
+              </Link>
+
+              {/* Gráfico cantidad por tema y estado - FALTA IMPLEMENTACION DE LINK */}
+              <Link
+                href="/graficas/estadisticas/grafica-estados"
+                className={`flex items-center space-x-2 p-2 rounded-md transition-colors ${
+                  pathname === "/graficas/estadisticas/grafica-estados"
+                    ? "bg-gray-400 text-white"
+                    : "text-gray-700 hover:bg-gray-300"
+                }`}
+              >
+                <FiPieChart size={16} />
+                <span>Gráfica - Cantidad por tema y estado</span>
+              </Link>
+
+              {/* Gráfico de ingresos por día agrupados por mes - FALTA IMPLEMENTACION DE LINK */}
+              <Link
+                href="/graficas/estadisticas/grafica-estados"
+                className={`flex items-center space-x-2 p-2 rounded-md transition-colors ${
+                  pathname === "/graficas/estadisticas/grafica-estados"
+                    ? "bg-gray-400 text-white"
+                    : "text-gray-700 hover:bg-gray-300"
+                }`}
+              >
+                <FiPieChart size={16} />
+                <span>Gráfica Ingresos del día por mes</span>
+              </Link>
             </div>
           )}
         </div>
