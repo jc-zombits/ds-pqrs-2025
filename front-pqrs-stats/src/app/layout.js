@@ -1,6 +1,6 @@
 import Providers from "./providers";
-import Sidebar from "./components/Sidebar";
 import "./globals.css";
+import ClientLayout from "./components/ClientLayout";
 
 export const metadata = {
   title: "PQRS Dashboard",
@@ -12,12 +12,9 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <body className="font-sans bg-gray-50">
         <Providers>
-          <div className="flex min-h-screen">
-            <Sidebar />
-            <main className="flex-1 ml-64 p-8">
-              {children}
-            </main>
-          </div>
+          <ClientLayout>
+            {children}
+          </ClientLayout>
         </Providers>
       </body>
     </html>

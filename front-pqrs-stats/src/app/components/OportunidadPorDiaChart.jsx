@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import axios from "axios";
+import Link from "next/link";
 
 const meses = [
   { value: "all", label: "Todos los meses" },
@@ -148,6 +149,14 @@ const OportunidadPorDiaChart = () => {
           </ul>
         </div>
       )}
+      {/* Botón para ir al análisis completo */}
+      <div className="mt-6 flex justify-end">
+        <Link href="/graficas/estadisticas/grafica-oportunidades-dia">
+          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow-md transition">
+            Ver análisis completo →
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

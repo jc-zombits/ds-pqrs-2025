@@ -23,7 +23,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="pt-10 flex items-center justify-center bg-white">
+    <div className="pt-10 flex items-center justify-center">
       <form onSubmit={handleSubmit} className="p-8 rounded-lg shadow-2xl w-96 bg-white">
         <h1 className="text-2xl font-bold mb-6 text-center text-gray-700">Iniciar Sesión</h1>
         

@@ -108,7 +108,7 @@ const OportunidadPorDiaChart = () => {
   }, [dataOriginal, mesSeleccionado]);
 
   const handleVolverAlInicio = () => {
-    router.push("/graficas"); // Redirige a la ruta principal (ajusta la ruta si es necesario)
+    router.push("/graficas#grafica-oportunidad"); // Redirige a la ruta principal (ajusta la ruta si es necesario)
   };
 
   return (
@@ -116,7 +116,7 @@ const OportunidadPorDiaChart = () => {
       {/* Botón Volver al inicio */}
       <button
         onClick={handleVolverAlInicio}
-        className="absolute top-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-md"
+        className="absolute top-12 right-12 bg-blue-500 text-white px-4 py-2 rounded-md"
       >
         Volver al inicio
       </button>
