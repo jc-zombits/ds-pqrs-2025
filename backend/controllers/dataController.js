@@ -2,7 +2,7 @@ const pool = require('../db');
 
 const getDataStats = async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM public.pqrs_2025'); // ← Cambia "tu_tabla"
+    const result = await pool.query('SELECT * FROM public.pqrs_2025_actual'); // ← Cambia "tu_tabla"
     res.status(200).json(result.rows);
   } catch (error) {
     console.error('Error al obtener datos:', error); // Mostrar error real
@@ -15,7 +15,7 @@ const getEstadoMesStats = async (req, res) => {
   try {
       const result = await pool.query(`
           SELECT estado, mes, COUNT(*) AS cantidad
-          FROM public.pqrs_2025
+          FROM public.pqrs_2025_actual
           GROUP BY estado, mes
           ORDER BY estado, mes
       `);
@@ -50,7 +50,7 @@ const getOportunidadPorDia = async (req, res) => {
               COUNT(*) FILTER (WHERE oportunidad = 'OPORTUNO') AS oportuno,
               COUNT(*) FILTER (WHERE oportunidad = 'NO OPORTUNO') AS no_oportuno,
               COUNT(*) FILTER (WHERE oportunidad = 'A TIEMPO') AS a_tiempo
-          FROM public.pqrs_2025
+          FROM public.pqrs_2025_actual
           GROUP BY mes, fecha
           ORDER BY mes, fecha;
       `);
@@ -70,7 +70,7 @@ const getTemaMesStats = async (req, res) => {
               mes,
               tema,
               COUNT(*) AS cantidad
-          FROM public.pqrs_2025
+          FROM public.pqrs_2025_actual
           GROUP BY mes, tema
           ORDER BY mes ASC, cantidad DESC;
       `);
@@ -98,7 +98,7 @@ const getTemaEstadoStats = async (req, res) => {
   try {
       const result = await pool.query(`
           SELECT tema, estado, COUNT(*) as cantidad
-          FROM public.pqrs_2025
+          FROM public.pqrs_2025_actual
           GROUP BY tema, estado
           ORDER BY tema, estado
       `);
@@ -114,7 +114,7 @@ const getIngresosPorDiaPorMes = async (req, res) => {
   try {
       const result = await pool.query(`
           SELECT mes, TO_CHAR(fecha_de_ingreso, 'YYYY-MM-DD') AS fecha_de_ingreso, COUNT(*) AS cantidad
-          FROM public.pqrs_2025
+          FROM public.pqrs_2025_actual
           GROUP BY mes, fecha_de_ingreso
           ORDER BY mes, fecha_de_ingreso
       `);
@@ -134,7 +134,7 @@ const getEstadoRutaPorMesYTema = async (req, res) => {
         tema,
         ultimo_estado_en_ruta,
         COUNT(*) AS cantidad
-      FROM public.pqrs_2025
+      FROM public.pqrs_2025_actual
       GROUP BY mes, tema, ultimo_estado_en_ruta
       ORDER BY mes, tema, ultimo_estado_en_ruta
     `);

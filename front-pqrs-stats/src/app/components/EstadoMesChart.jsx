@@ -68,7 +68,7 @@ const EstadoMesChart = () => {
   };
 
   return (
-    <div className="p-6 bg-white rounded-xl shadow-2xl">
+    <div className="p-8 bg-white rounded-xl shadow-2xl">
       <h2 className="text-xl font-bold mb-4 text-blue-400">Gráfica de Estados por Mes</h2>
 
       <div className="mb-4 text-orange-600">
@@ -102,7 +102,7 @@ const EstadoMesChart = () => {
       {/* Botón para ir al análisis completo */}
       <div className="mt-6 flex justify-end">
         <Link href="/graficas/estadisticas/grafica-estados">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow-md transition">
+          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 mt-9 rounded shadow-md transition">
             Ver análisis completo →
           </button>
         </Link>
